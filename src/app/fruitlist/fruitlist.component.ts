@@ -80,4 +80,14 @@ export class FruitlistComponent {
             ],
         },
     ];
+
+    getStarType(count: number, starts: number): string {
+        if (starts >= count) {
+            return "full";
+        } else if (starts >= count - 0.5) {
+            return "half";
+        } else {
+            return "empty";
+        }
+    }
 }
