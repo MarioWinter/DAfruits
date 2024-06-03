@@ -33,7 +33,7 @@ import { Component, EventEmitter, Output } from "@angular/core";
                         font-weight: bold;
                     }
                     > p:nth-child(2) {
-                        color: rgb(32, 128, 141) !important;
+                        color: #fd5b4f !important;
                         font-size: 38px;
                         margin-left: -10px;
                     }
