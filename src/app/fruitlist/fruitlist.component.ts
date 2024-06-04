@@ -9,7 +9,11 @@ import { Component } from "@angular/core";
     styleUrl: "./fruitlist.component.scss",
 })
 export class FruitlistComponent {
-    fruitColor = "#FFD400";
+    FontBackroundColor: string = "#00000";
+
+    getStatusColor(stars: number) {
+        return stars >= 3 ? "fontColorGood" : "fontColorBad";
+    }
 
     fruitlist = [
         {

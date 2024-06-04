@@ -15,7 +15,10 @@
                         alt=""
                         srcset=""
                     />} @default {<img src="./assets/img/stars/star-empty.svg" alt="" srcset="" />} } }
-                    <p [ngStyle]="{ color: fruitColor }">({{ fruit.stars }})</p>
+                    <p [ngClass]="getStatusColor(fruit.stars)" [ngStyle]="{ 'font-weight': 'bold' }">
+                        ({{ fruit.stars }})
+                    </p>
+                    <!-- <p [ngStyle]="{ 'backround-color': FontBackroundColor }">({{ fruit.stars }})</p> -->
 
                     <!-- @for (count of [1,2,3,4,5]; track fruitlist) { @if (fruit.stars >= count) {
                     <img src="./assets/img/stars/star.svg" alt="" srcset="" />
