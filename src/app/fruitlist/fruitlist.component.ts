@@ -11,6 +11,7 @@ import { SinglefruitComponent } from "./singlefruit/singlefruit.component";
 })
 export class FruitlistComponent {
     FontBackroundColor: string = "#00000";
+    username: string = "Mario W.";
 
     fruitlist = [
         {
@@ -83,4 +84,10 @@ export class FruitlistComponent {
             ],
         },
     ];
+    addComment(comment: string, index: number) {
+        this.fruitlist[index].reviews.push({
+            name: this.username,
+            text: comment,
+        });
+    }
 }

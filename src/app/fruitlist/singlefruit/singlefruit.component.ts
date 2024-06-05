@@ -1,13 +1,16 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: "app-singlefruit",
     standalone: true,
-    imports: [],
+    imports: [FormsModule],
     templateUrl: "./singlefruit.component.html",
     styleUrl: "./singlefruit.component.scss",
 })
 export class SinglefruitComponent {
+    inputComment: string = "";
+
     getStatusColor(stars: number) {
         return stars >= 3 ? "fontColorGood" : "fontColorBad";
     }
@@ -33,4 +36,11 @@ export class SinglefruitComponent {
             { name: "Arne P.", text: "nicht so meins" },
         ],
     };
+
+    @Output() fruitComment = new EventEmitter<string>();
+
+    sentComment() {
+        this.fruitComment.emit(this.inputComment);
+        this.inputComment = "";
+    }
 }
