@@ -12,10 +12,6 @@ import { SinglefruitComponent } from "./singlefruit/singlefruit.component";
 export class FruitlistComponent {
     FontBackroundColor: string = "#00000";
 
-    getStatusColor(stars: number) {
-        return stars >= 3 ? "fontColorGood" : "fontColorBad";
-    }
-
     fruitlist = [
         {
             name: "Apfel",
@@ -87,14 +83,4 @@ export class FruitlistComponent {
             ],
         },
     ];
-
-    getStarType(count: number, starts: number): string {
-        if (starts >= count) {
-            return "full";
-        } else if (starts >= count - 0.5) {
-            return "half";
-        } else {
-            return "empty";
-        }
-    }
 }
