@@ -14,7 +14,7 @@ export class FruitlistComponent {
     FontBackroundColor: string = "#00000";
     fruitlistdata = inject(FruitlistdataService);
 
-    AddCommentOnFruit(comment: string, index: number) {
+    AddCommentToFruit(comment: string, index: number) {
         this.fruitlistdata.postComment(comment, index);
     }
 }
